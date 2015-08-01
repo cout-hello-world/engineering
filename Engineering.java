@@ -20,7 +20,9 @@ public class Engineering {
 			System.exit(1);
 			return;
 		}
-	}
+
+		interactiveLoop(records);
+}
 
 	private static ArrayList<Student> readRecords(File file)
 	        throws IOException {
@@ -28,9 +30,20 @@ public class Engineering {
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			for (String line = reader.readLine(); // Forget first line.
 			     (line = reader.readLine()) != null;) {
-				records.add(new Student(line));
+				if (!line.isEmpty()) {
+					records.add(new Student(line));
+				}
 			}
 		}
 		return records;
+	}
+	
+	private static void interactiveLoop(ArrayList<Student> records) {
+		BufferedReader stdin = new BufferedReader(new FileInputStream(
+		                       System.in));
+		for (String line; (line = stdin.readLine()) != null;) {
+			System.out.println(line);
+		}
+
 	}
 }
