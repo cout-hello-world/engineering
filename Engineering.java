@@ -104,10 +104,10 @@ public class Engineering {
 					}
 					int total = satisfyA.size();
 					System.out.printf("%d / %d satisfy both.\n", both, total);
-					System.out.printf("%d / %d satisfy only the first.\n",
-					                  first, total);
-					System.out.printf("%d / %d satisfy only the second.\n",
-					                  second, total);
+					System.out.printf("%d / %d satisfy only \"%s\".\n",
+					                  first, total, tokens[1]);
+					System.out.printf("%d / %d satisfy only \"%s\".\n",
+					                  second, total, tokens[2]);
 					System.out.printf("%d / %d satisfy neither.\n",
 					                  neither, total);
 				} catch (ArrayIndexOutOfBoundsException ex) {
