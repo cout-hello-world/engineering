@@ -21,4 +21,4 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 javac Student.java Engineering.java
-jar cfe Engineering.jar Engineering Student.class Engineering.class
+jar cfe Engineering.jar Engineering Student.class Engineering.class LICENSE
