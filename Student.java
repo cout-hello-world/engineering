@@ -63,7 +63,8 @@ public class Student {
 	public boolean satisfies(String[] varVal) {
 		String var = varVal[0];
 		String val = varVal[1];
-		boolean valBool = val.equalsIgnoreCase("true");
+		boolean valBool = val.length() > 0 &&
+		                  val.substring(0, 1).equalsIgnoreCase("t");
 		if (var.equalsIgnoreCase(names[0])) {
 			return val.equalsIgnoreCase(last);
 		} else if (var.equalsIgnoreCase(names[1])) {
