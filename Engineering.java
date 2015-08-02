@@ -74,6 +74,13 @@ public class Engineering {
 		try (BufferedReader stdin = new BufferedReader(new InputStreamReader(
 			                        System.in))) {
 			for (String line; (line = stdin.readLine()) != null;) {
+				if (line.trim().equalsIgnoreCase("help")) {
+					printOptions();
+					continue;
+				}
+				if (line.trim().equalsIgnoreCase("quit")) {
+					break;
+				}
 				String[] tokens = line.split("\\s+");
 				try {
 					String[] a = tokens[0].split("=");
@@ -118,6 +125,13 @@ public class Engineering {
 					continue;
 				}
 			}
+		}
+	}
+
+	private static void printOptions() {
+		System.out.println("Available categories:");
+		for (int i = 0; i < Student.names.length; i++) {
+			System.out.println(Student.names[i]);
 		}
 	}
 }
