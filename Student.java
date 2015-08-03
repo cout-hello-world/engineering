@@ -22,7 +22,6 @@
  * SOFTWARE.
  */
 public class Student {
-	/* Public data, because this class is immutable, this data can be public */
 	private final String last;
 	private final String first;
 	private final String gender;
