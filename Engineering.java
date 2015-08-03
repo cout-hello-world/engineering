@@ -53,7 +53,7 @@ public class Engineering {
 			System.exit(1);
 			return;
 		}
-}
+	}
 
 	private static ArrayList<Student> readRecords(File file)
 	        throws IOException {
